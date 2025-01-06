@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zagrożenia Cyberbezpieczeństwa</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/i18next/dist/umd/i18next.min.js"></script>
+</head>
+<body>
+
+  <nav class="hamburger-menu">
+    
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox" class="toggle">
+        <div class="bars" id="bar1"></div>
+        <div class="bars" id="bar2"></div>
+        <div class="bars" id="bar3"></div>
+    </label>
+    <div class="menu-content" onmouseleave="hide_menu()">
+      <ul>
+        <li>
+          <label for="language-select" data-i18n="menu.language">Język:</label>
+          <select id="language-select">
+            <option value="pl">Polski</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="ar">العربية</option>
+            <option value="ru">Русский</option>
+          </select>
+        </li>
+        <li>
+          <label for="theme-select" data-i18n="menu.theme">Motyw:</label>
+          <select id="theme-select">
+            <option value="dark" data-i18n="theme.dark">Ciemny</option>
+            <option value="high-contrast" data-i18n="theme.highContrast">Wysoki kontrast</option>
+            <option value="light" data-i18n="theme.light">Jasny</option>
+          </select>
+        </li>
+        <li>
+          <label for="font-size-select" data-i18n="menu.fontSize">Rozmiar czcionki:</label>
+          <select id="font-size-select">
+            <option value="small" data-i18n="fontSize.small">Mała</option>
+            <option value="medium" data-i18n="fontSize.medium" selected>Średnia</option>
+            <option value="large" data-i18n="fontSize.large">Duża</option>
+          </select>
+        </li>
+      
+    </ul>
+      
+    </div>
+    <ul class="denger_list">
+        <li><a href="#ddos" data-i18n="menu.ddos">Atak DDoS</a></li>
+        <li><a href="#phishing" data-i18n="menu.phishing">Phishing</a></li>
+       
+        <li><a href="#malvertising" data-i18n="menu.malvertising">Malvertising</a></li>
+        <li><a href="#mitm" data-i18n="menu.mitm">Ataki MITM</a></li>
+      </ul> 
+  </nav>
+
+  <header>
+    <h1 data-i18n="header.title">Zagrożenia Cyberbezpieczeństwa</h1>
+    <h3 data-i18n="header.subtitle">Poznaj najgroźniejsze ataki oraz sposoby obrony.</h3>
+  </header>
+
+  <main>
+ 
+    <section id="ddos" class="animated-section">
+      <h2 data-i18n="ddos.title">Atak DDoS</h2>
+      <p data-i18n="ddos.description">
+        Atak DDoS to próba przeciążenia zasobów serwera przez masowe wysyłanie zapytań w krótkim czasie.
+      </p>
+      <p data-i18n="ddos.example">
+        Przykład: 1 czerwca 2022 roku doszło do ataku na serwery dużej firmy hostingowej, co spowodowało przerwę w działaniu usług.
+      </p>
+      <h3 data-i18n="ddos.prevention">Porady prewencyjne:</h3>
+      <ul>
+        <li data-i18n="ddos.tip1">Używaj zapór sieciowych (firewall).</li>
+        <li data-i18n="ddos.tip2">Korzystaj z usług ochrony DDoS.</li>
+        <li data-i18n="ddos.tip3">Monitoruj ruch sieciowy na bieżąco.</li>
+      </ul>
+    </section>
+
+
+    <section id="phishing" class="animated-section">
+      <h2 data-i18n="phishing.title">Phishing</h2>
+      <p data-i18n="phishing.description">
+        Phishing polega na podszywaniu się pod zaufane osoby lub instytucje w celu wyłudzenia danych.
+      </p>
+      <p data-i18n="phishing.example">
+        Przykład: Otrzymanie fałszywego e-maila od "banku" z prośbą o podanie danych logowania.
+      </p>
+      <h3 data-i18n="phishing.prevention">Porady prewencyjne:</h3>
+      <ul>
+        <li data-i18n="phishing.tip1">Nie klikaj w podejrzane linki.</li>
+        <li data-i18n="phishing.tip2">Sprawdzaj nadawcę wiadomości.</li>
+        <li data-i18n="phishing.tip3">Korzystaj z uwierzytelniania dwuskładnikowego.</li>
+      </ul>
+    </section>
+
+    <section id="malvertising" class="animated-section">
+      <h2 data-i18n="malvertising.title">Malvertising</h2>
+      <p data-i18n="malvertising.description">
+        Malvertising to wykorzystanie reklam online do rozprzestrzeniania złośliwego oprogramowania.
+      </p>
+      <p data-i18n="malvertising.example">
+        Przykład: Kliknięcie na reklamę, która prowadzi do zainfekowanej strony.
+      </p>
+      <h3 data-i18n="malvertising.prevention">Porady prewencyjne:</h3>
+      <ul>
+        <li data-i18n="malvertising.tip1">Blokuj reklamy za pomocą oprogramowania antywirusowego.</li>
+        <li data-i18n="malvertising.tip2">Używaj przeglądarek z wbudowaną ochroną.</li>
+        <li data-i18n="malvertising.tip3">Aktualizuj oprogramowanie regularnie.</li>
+      </ul>
+    </section>
+
+
+    <section id="mitm" class="animated-section">
+      <h2 data-i18n="mitm.title">Ataki Man-in-the-Middle (MITM)</h2>
+      <p data-i18n="mitm.description">
+        Ataki MITM polegają na przechwytywaniu komunikacji między dwiema stronami bez ich wiedzy.
+      </p>
+      <p data-i18n="mitm.example">
+        Przykład: Podsłuchiwanie połączenia podczas korzystania z niezabezpieczonego Wi-Fi.
+      </p>
+      <h3 data-i18n="mitm.prevention">Porady prewencyjne:</h3>
+      <ul>
+        <li data-i18n="mitm.tip1">Korzystaj z VPN podczas łączenia się z publicznym Wi-Fi.</li>
+        <li data-i18n="mitm.tip2">Unikaj otwartych sieci Wi-Fi.</li>
+        <li data-i18n="mitm.tip3">Sprawdzaj certyfikaty SSL na stronach internetowych.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
