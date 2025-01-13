@@ -3,21 +3,27 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 296;
+    font-style: normal;
     margin: 0;
     padding: 0;
     transition: all 0.3s ease;
     font-size: 16px; 
     background-image: url(bg.png);
-    color: #ffffff; 
+    color: #c9c9c9; 
   }
   
 
   body.dark {
-  
-    color: #ffffff !important; 
+    color: #c9c9c9 !important; 
   }
-  
+  body.dark > * > * > * > li{
+    color: #c9c9c9;
+
+  }
+
   body.light {
     background-color: #ffffff !important;
     background-image: none;
@@ -74,24 +80,26 @@ body {
     text-align: center;
     padding: 2rem;
     padding-top: 7rem;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #c9c9c9;
   }
   h1, h2, h3 {
     margin: 0;
   }
   
   h1 {
-    font-size: 2rem;
+    font-size: 3.3rem;
   }
   
   h2 {
-    font-size: 1.5rem;
+    font-size: 3rem;
+
     margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   
   h3 {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
   }
   
   ul {
@@ -110,12 +118,19 @@ body {
   }
   section {
     padding: 5rem;
-    border-bottom: 2px solid #ffffff!important;
+    border-bottom: 2px solid #c9c9c9!important;
     width: 90%;
     padding-left: 15%;
 
   }
-  
+  section > ul > li{
+    margin-left: 1rem;
+    list-style:disc;
+  }
+  section > h3{
+    margin-top: 5rem;
+    font-size: 2.3rem;
+  }
   .animated-section {
     opacity: 0;
     transform: translateY(20px);
@@ -133,9 +148,9 @@ body {
     left: 0;
     width: 100%;
     background-color: #000;
-    color: white;
+    color: #c9c9c9;
     z-index: 1000;
-    border-bottom: #FFF solid 2px;
+    border-bottom: #c9c9c9 solid 2px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -171,7 +186,7 @@ body {
     margin-top: 150px;
     padding-left: 0.5;
     position: absolute;
-    border: #FFF solid 2px;
+    border: #c9c9c9 solid 2px;
     
   }
   
@@ -233,7 +248,7 @@ body {
   }
   .denger_list > li > a{
     text-decoration: none;
-    color: whitesmoke;
+    color: #c9c9c9;
     font-size: 1.3em;
 
   }
@@ -305,13 +320,16 @@ body {
     transform: rotate(180deg);
   }
   .animated-section.visible {
-    color: white;
+    color: #c9c9c9;
     text-decoration: none;
     font-size: 25px;
     border: none;
     background: none;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 296;
+    font-style: normal;
   }
   
   a::before {
@@ -322,7 +340,7 @@ body {
     content: '';
     width: 0%;
     height: 2px;
-    background: #ffffff;
+    background: #c9c9c9;
     display: block;
     transition: 0.5s;
     margin-top: 3px;
@@ -335,12 +353,15 @@ body {
 
   select {
     background-color: #000000;
-    color: #ffffff; 
+    color: #c9c9c9; 
     border: 1px solid #ccc; 
     border-radius: 4px;
     padding: 4px;
     font-size: 16px;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 296;
+    font-style: normal;
     appearance: none;
     cursor: pointer;
   }
@@ -352,6 +373,6 @@ body {
   
   option {
     background-color: #000000;
-    color: #ffffff;
+    color: #c9c9c9;
     padding: 5px;
   }
