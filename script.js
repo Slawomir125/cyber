@@ -18,7 +18,7 @@ function hide_menu(){
 
   document.getElementById('font-size-select').addEventListener('change', (event) => {
     const fontSize = event.target.value;
-    const newSize = fontSize === 'small' ? '14px' : fontSize === 'medium' ? '18px' : '22px';
+    const newSize = fontSize === 'small' ? '15px' : fontSize === 'medium' ? '25px' : '33px';
     document.querySelectorAll('*').forEach(element => {
       element.style.fontSize = newSize;
     });
